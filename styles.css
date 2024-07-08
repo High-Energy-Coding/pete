@@ -45,7 +45,8 @@ body {
   padding: 0;
 }
 .temp-mobile-only-deploy {
-  max-width: 425px;
+  max-width: 725px;
+  margin: auto;
 }
 
 header {
@@ -121,6 +122,9 @@ header {
   width: 100%;
 }
 
+.bottom img {
+  margin: auto;
+}
 .bottom {
   margin-top: 120px;
 }
