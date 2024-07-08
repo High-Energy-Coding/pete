@@ -1,0 +1,183 @@
+/* styles.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.temp-mobile-only-deploy {
+  max-width: 425px;
+}
+
+header {
+  text-align: center;
+}
+
+.logo-menu {
+  min-height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #95b67a;
+}
+
+.logo-menu .top {
+  color: #49366e;
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  margin-right: 32px;
+}
+.logo-menu img {
+  height: 70px;
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  background-color: #7a95b6;
+}
+.hero-text {
+  height: 100%;
+  color: white;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.service-area {
+  background: linear-gradient(to bottom, #95b67a, white);
+}
+
+.flags {
+  display: flex;
+}
+.flags img {
+  width: 100%;
+}
+
+.bottom {
+  margin-top: 120px;
+}
+.about,
+.service-area,
+.services,
+.contact {
+  margin-top: 120px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about h2,
+.service-area h2,
+.services h2,
+.contact h2 {
+  color: #4c6d4d;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.footer-container {
+  color: #49366e;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+footer {
+  background-color: #91c48c;
+  padding: 10px;
+  text-align: center;
+  min-height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  height: 50px;
+}
