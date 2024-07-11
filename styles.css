@@ -81,6 +81,27 @@ header {
   padding: 10px;
   background-color: #95b67a;
 }
+.nanum {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.istok {
+  font-family: "Istok Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.about-title {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+.about {
+  text-align: left;
+}
+.about-2 {
+  margin-top: 16px;
+}
 
 .logo-menu .top {
   color: #49366e;
@@ -137,9 +158,11 @@ header {
 
 .flags {
   display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }
 .flags img {
-  width: 100%;
+  width: 40%;
 }
 
 .bottom img {
@@ -154,14 +177,14 @@ header {
 .contact {
   margin-top: 120px;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .about h2,
 .service-area h2,
-.services h2,
 .contact h2 {
   color: #4c6d4d;
+  text-align: center;
 }
 
 .services {
@@ -169,11 +192,26 @@ header {
   flex-direction: column;
   gap: 20px;
 }
+.services-title {
+  font-size: 32px;
+  text-align: center;
+  color: black;
+}
 
 .service {
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 20px;
+}
+.service-title {
+  margin-top: 16px;
+}
+.service-blurb {
+  padding: 24px;
+}
+.service-action {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 32px;
 }
 
 .service img {
