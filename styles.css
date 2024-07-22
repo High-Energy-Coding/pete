@@ -45,7 +45,6 @@ body {
   padding: 0;
 }
 .temp-mobile-only-deploy {
-  max-width: 725px;
   margin: auto;
 }
 
@@ -98,6 +97,9 @@ header {
 }
 .about {
   text-align: left;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-2 {
   margin-top: 16px;
@@ -120,11 +122,6 @@ header {
 .menu-icon {
   font-size: 30px;
   cursor: pointer;
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
 }
 
 .hero-text-container {
@@ -160,6 +157,9 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 16px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .flags img {
   width: 40%;
@@ -197,10 +197,19 @@ header {
   text-align: center;
   color: black;
 }
+.service-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .service {
   border: 1px solid #ddd;
   border-radius: 10px;
+  max-width: 400px;
+  min-width: 320px;
 }
 .service-title {
   margin-top: 16px;
@@ -217,6 +226,7 @@ header {
 .service img {
   width: 100%;
   height: auto;
+  max-height: 285px;
   border-radius: 10px 10px 0 0;
 }
 
@@ -242,4 +252,31 @@ footer {
 
 footer img {
   height: 50px;
+}
+.hero-image img {
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+  background-color: #7a95b6;
+  @media (width > 800px) {
+    width: 50%;
+  }
+}
+.hero-side-by-side {
+  display: flex;
+  height: 100%;
+  max-height: 396px;
+}
+.left-hero {
+}
+.right-hero {
+  display: none;
+  @media (width > 800px) {
+    display: block;
+  }
+}
+.bottom-hero {
+  @media (width > 800px) {
+    display: none;
+  }
 }
