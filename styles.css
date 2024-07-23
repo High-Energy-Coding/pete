@@ -286,3 +286,43 @@ footer img {
     display: none;
   }
 }
+
+.fade-in-1 {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  animation: fadeInHeader 2s ease-in-out 1s forwards;
+}
+
+.fade-in-2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInParagraph 2s ease-in-out 2s forwards;
+}
+
+/* Keyframes for the header */
+@keyframes fadeInHeader {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Keyframes for the paragraph */
+@keyframes fadeInParagraph {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
