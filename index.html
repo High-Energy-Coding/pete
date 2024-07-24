@@ -142,8 +142,7 @@
         <div class="form-container">
           <h2>Contact Us</h2>
           <form name="contact-us" netlify>
-            <input name="form-name" type="hidden" value="connect">
-                  <label for="name">Name:</label>
+              <label for="name">Name:</label>
               <input type="text" id="name" name="name" placeholder="Your Name" required>
 
               <label for="email">Email:</label>
@@ -178,8 +177,11 @@
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString(),
               })
-                .then(() => alert("Thank you. We will be in touch soon."))
-                .catch((error) => alert(error));
+                .then(() =>
+                    alert("Message sent. We will reach out to you with next steps.");
+                    window.scrollTo(0,0);
+                )
+                .catch((error) => console.error(error));
             };
 
             document
