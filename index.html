@@ -138,6 +138,36 @@
                 </div>
             </div>
         </section>
+        <div class="form-container">
+          <h2>Contact Us</h2>
+          <form action='/' class='netlify' method='POST' name='connect'>
+            <input name="form-name" type="hidden" value="connect">
+                  <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" onfocus="clearInput(this)" onblur="restoreInput(this, 'I\'m looking for an expert in HVAC services. Can you help?')">I'm looking for an expert in HVAC services. Can you help?</textarea>
+
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
+          <script>
+            function clearInput(element) {
+              if (element.value === element.defaultValue) {
+                element.value = '';
+              }
+            }
+
+            function restoreInput(element, defaultValue) {
+              if (element.value === '') {
+                element.value = defaultValue;
+              }
+            }
+          </script>
 
         <section class="bottom">
             <img src="images/footer-logo.png" alt="Footer Logo">
