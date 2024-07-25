@@ -326,13 +326,6 @@ footer img {
     transform: translateY(0);
   }
 }
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
 
 .form-row {
   display: flex;
@@ -368,6 +361,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="phone"],
 textarea {
   width: 100%;
   padding: 12px;
