@@ -167,6 +167,9 @@ header {
 
 .bottom img {
   margin: auto;
+  @media (width > 800px) {
+    height: 400px;
+  }
 }
 .bottom {
   margin-top: 120px;
@@ -196,9 +199,10 @@ header {
   }
 }
 .services-title {
-  font-size: 32px;
+  font-size: 40px;
   text-align: center;
   color: black;
+  margin-bottom: 16px;
 }
 .service-cards {
   display: flex;
