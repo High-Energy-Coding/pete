@@ -66,10 +66,39 @@ body {
 }
 
 .hero-phone {
-  color: inherit;
+  color: #7a95b6;
+  background: rgba(255,255,255,0.95);
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1em;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+.hero-phone:hover {
+  background: rgba(255,255,255,1);
+  color: #49366e;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 header {
   text-align: center;
+  background: linear-gradient(135deg, #95b67a 0%, #7a95b6 50%, #95b67a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+  pointer-events: none;
 }
 
 .logo-menu {
@@ -77,8 +106,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #95b67a;
+  padding: 20px 24px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
 }
 .nanum {
   font-family: "Nanum Myeongjo", serif;
@@ -106,17 +137,24 @@ header {
 }
 
 .logo-menu .top {
-  color: #49366e;
+  color: #fff;
   font-size: 32px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   font-variation-settings: "slnt" 0;
   margin-right: 32px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  letter-spacing: 0.02em;
 }
 .logo-menu img {
-  height: 70px;
+  height: 80px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease;
+}
+.logo-menu img:hover {
+  transform: scale(1.05);
 }
 
 .menu-icon {
@@ -128,41 +166,71 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 130px;
-  background-color: #7a95b6;
+  min-height: 160px;
+  background: linear-gradient(to bottom, rgba(122,149,182,0.9) 0%, rgba(122,149,182,1) 100%);
+  position: relative;
+  z-index: 2;
+}
+.hero-text-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 .hero-text {
   height: 100%;
   color: white;
-  padding: 20px;
+  padding: 32px 20px;
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 800px;
 }
 
 .hero-text h1 {
-  margin: 0;
-  font-size: 2em;
+  margin: 0 0 16px 0;
+  font-size: 2.1em;
+  font-weight: 800;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.2);
+  letter-spacing: 0.01em;
 }
 
 .hero-text p {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.15em;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .service-area {
   background: linear-gradient(to bottom, #95b67a, white);
 }
 
-.flags {
+.service-area-content {
   display: flex;
-  justify-content: center;
-  margin-top: 16px;
-  max-width: 400px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  gap: 20px;
 }
-.flags img {
-  width: 40%;
+.illinois-flag {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.illinois-flag:hover {
+  transform: scale(1.05);
 }
 
 .bottom img {
@@ -239,29 +307,44 @@ header {
   border-radius: 10px 10px 0 0;
 }
 
-.footer-container {
-  color: #49366e;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
-}
-
+/* Modern responsive footer */
 footer {
-  background-color: #91c48c;
-  padding: 10px;
+  background: #f7f9fb;
+  color: #222;
+  padding: 32px 0 20px 0;
   text-align: center;
-  min-height: 260px;
+  border-top: 1.5px solid #e0e4ea;
+  margin-top: 48px;
+}
+.footer-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 16px;
+}
+.footer-container img {
+  height: 48px;
+  width: auto;
+  margin-bottom: 8px;
+}
+.copyright {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+@media (min-width: 700px) {
+  footer {
+    padding: 40px 0 24px 0;
+  }
+  .footer-container img {
+    height: 60px;
+  }
+  .copyright {
+    font-size: 1.1rem;
+  }
 }
 
-footer img {
-  height: 50px;
-}
 .hero-image img {
   height: auto;
   object-fit: cover;
